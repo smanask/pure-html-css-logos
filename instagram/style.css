@@ -1,0 +1,72 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-carbon-black: #1d1f20;
+	--gradient-purple: #a237b6;
+	--gradient-blue: #3e5fbc;
+	--gradient-pink: #d42e81;
+	--gradient-yellow: #ffdb8b;
+	--gradient-red: #ee653d;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-carbon-black);
+}
+
+.logo-outer-box {
+	width: 140px;
+	height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: radial-gradient(circle at 30% 110%,
+			var(--gradient-yellow) 0%,
+			var(--gradient-red) 25%,
+			var(--gradient-pink) 50%,
+			var(--gradient-purple) 75%,
+			var(--gradient-blue) 100%);
+	border-radius: 10px;
+	box-shadow: 0 0 14px var(--gradient-pink);
+}
+
+.logo-box-stroke {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 8px solid var(--color-white);
+	border-radius: 15px;
+	position: relative;
+}
+
+.logo-lens {
+	width: 50px;
+	height: 50px;
+	border: 8px solid var(--color-white);
+	border-radius: 100%;
+	z-index: 0;
+}
+
+.logo-lens:after {
+	width: 12px;
+	height: 12px;
+	content: "";
+	border-radius: 100%;
+	background: var(--color-white);
+	z-index: 1;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
