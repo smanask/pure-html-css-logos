@@ -1,0 +1,97 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-carbon-black: #1d1f20;
+	--color-blue: #0a66c2;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-carbon-black);
+}
+
+.logo-outer-box {
+	width: 140px;
+	height: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-blue);
+	border-radius: 10px;
+	box-shadow: 0 0 14px var(--color-blue);
+}
+
+.logo-text {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+	position: relative;
+	top: 10px;
+}
+
+.letter-i {
+	width: 20px;
+	height: 60px;
+	background: var(--color-white);
+}
+
+.letter-i:before {
+	width: 20px;
+	height: 20px;
+	content: "";
+	display: block;
+	position: relative;
+	top: -25px;
+	background: var(--color-white);
+	border-radius: 100%;
+	z-index: 1;
+}
+
+.letter-n {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+}
+
+.letter-n-left {
+	width: 20px;
+	height: 60px;
+	background: var(--color-white);
+}
+
+.letter-n-right {
+	width: 50px;
+	height: 60px;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: var(--color-white);
+	border-radius: 22px 22px 0 0;
+	z-index: 0;
+}
+
+.letter-n-right:after {
+	width: 30px;
+	height: 50px;
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	background: var(--color-blue);
+	border-radius: 17px 20px 0 0;
+	z-index: 0;
+}
