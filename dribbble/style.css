@@ -1,0 +1,111 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-carbon-black: #1d1f20;
+	--color-pink-dark: #c32361;
+	--color-pink: #ea4c89;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-carbon-black);
+}
+
+.logo-outer-circle {
+	width: 140px;
+	height: 140px;
+	background: var(--color-pink);
+	border-radius: 100%;
+	box-shadow: 0 0 14px var(--color-pink-dark);
+	position: relative;
+	animation: bounce 3s ease-in;
+}
+
+.logo-inner-circle {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: 10px solid var(--color-pink-dark);
+	border-radius: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.line-vertical {
+	width: 50px;
+	height: 155px;
+	background: transparent;
+	border: 10px solid transparent;
+	border-right: 10px solid var(--color-pink-dark);
+	border-radius: 100% 100% 100% 0;
+	transform: rotate(-25deg);
+	position: absolute;
+	top: -2px;
+	left: 35px;
+	z-index: 0;
+}
+
+.line-horizontal-top {
+	width: 120px;
+	height: 35%;
+	border: 10px solid transparent;
+	border-bottom-color: var(--color-pink-dark);
+	border-radius: 0 0 100% 0;
+	position: absolute;
+	top: 20px;
+	left: 5px;
+	z-index: 0;
+	transform: rotate(-10deg);
+}
+
+.line-horizontal-bottom {
+	width: 150px;
+	height: 35%;
+	border: 10px solid transparent;
+	border-top-color: var(--color-pink-dark);
+	border-radius: 100% 100% 0 100%;
+	position: absolute;
+	bottom: 15px;
+	left: 5px;
+	z-index: 0;
+	transform: rotate(-20deg);
+}
+
+@keyframes bounce {
+	0%,	25%, 55%, 100% {
+		animation-timing-function: cubic-bezier(.220, .65, .360, 1);
+		transform: translateZ(0);
+	}
+
+	42%, 45% {
+		animation-timing-function: cubic-bezier(.760, .06, .860, .07);
+		transform: translate3d(0, -30px, 0) scaleY(1.1);
+	}
+
+	65% {
+		animation-timing-function: cubic-bezier(.760, .06, .860, .07);
+		transform: translate3d(0, -15px, 0) scaleY(1.05);
+	}
+
+	75% {
+		transform: translateZ(0) scaleY(.96);
+		transition-timing-function: cubic-bezier(.220, .65, .360, 1);
+	}
+
+	90% {
+		transform: translate3d(0, -5px, 0) scaleY(1.03);
+	}
+}
