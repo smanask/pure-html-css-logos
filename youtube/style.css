@@ -1,0 +1,40 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-carbon-black: #1d1f20;
+	--color-red: #ff0000;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-carbon-black);
+}
+
+.logo-outer-box {
+	width: 140px;
+	height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-red);
+	border-radius: 10px;
+	box-shadow: 0 0 14px var(--color-red);
+}
+
+.logo-play-icon {
+	width: 32px;
+	height: 32px;
+	background: var(--color-white);
+	clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
