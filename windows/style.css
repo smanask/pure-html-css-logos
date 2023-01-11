@@ -1,0 +1,72 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-carbon-black: #1d1f20;
+	--color-red: #ec4c23;
+	--color-green: #7db300;
+	--color-blue: #0f90f2;
+	--color-yellow: #f7b302;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-carbon-black);
+}
+
+.logo-outer-box {
+	width: 140px;
+	height: 140px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-white);
+	border-radius: 10px;
+	box-shadow: 0 0 14px var(--color-white);
+	position: relative;
+}
+
+.logo-inner-box {
+	width: 80px;
+	height: 80px;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
+}
+
+.box {
+	width: 40px;
+	height: 40px;
+}
+
+.box.top-left {
+	background: var(--color-red);
+	border-radius: 4px 0 0 0;
+}
+
+.box.top-right {
+	background: var(--color-green);
+	border-radius: 0 4px 0 0;
+}
+
+.box.bottom-left {
+	background: var(--color-blue);
+	border-radius: 0 0 0 4px;
+}
+
+.box.bottom-right {
+	background: var(--color-yellow);
+	border-radius: 0 0 4px 0;
+}
