@@ -1,0 +1,94 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-carbon-black: #1d1f20;
+	--color-orange: #f05033;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-carbon-black);
+}
+
+.logo-outer-box {
+	width: 140px;
+	height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-orange);
+	border-radius: 10px;
+	box-shadow: 0 0 14px var(--color-orange);
+}
+
+.logo-inner-box {
+	width: 80px;
+	height: 80px;
+	background: var(--color-white);
+	border-radius: 8px;
+	position: relative;
+	transform: rotate(45deg);
+}
+
+.line-top {
+	width: 50px;
+	height: 10px;
+	background: var(--color-orange);
+	position: absolute;
+	top: 15px;
+	left: -1px;
+}
+
+.line-top:before {
+	content: " ";
+	width: 20px;
+	height: 20px;
+	background: var(--color-orange);
+	border-radius: 100%;
+	position: absolute;
+	top: -5px;
+	left: 15px;
+}
+
+.line-top:after {
+	content: " ";
+	width: 20px;
+	height: 20px;
+	background: var(--color-orange);
+	border-radius: 100%;
+	position: absolute;
+	top: -5px;
+	left: 47px;
+}
+
+.line-bottom {
+	width: 50px;
+	height: 10px;
+	background: var(--color-orange);
+	position: absolute;
+	top: 39px;
+	right: 8px;
+	transform: rotate(45deg);
+}
+
+.line-bottom:after {
+	content: " ";
+	width: 20px;
+	height: 20px;
+	background: var(--color-orange);
+	border-radius: 100%;
+	position: absolute;
+	top: -5px;
+	left: 35px;
+}
