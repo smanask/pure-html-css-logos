@@ -1,0 +1,112 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-carbon-black: #1d1f20;
+	--color-green: #30d780;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-carbon-black);
+}
+
+.logo-outer-box {
+	width: 140px;
+	height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-green);
+	border-radius: 10px;
+	box-shadow: 0 0 14px var(--color-green);
+	position: relative;
+}
+
+.logo-semi-circle {
+	width: 100px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 60px;
+	border-radius: 100%;
+	background: var(--color-white);
+	position: relative;
+	top: 25px;
+}
+
+.logo-semi-circle:before {
+	content: " ";
+	width: 5px;
+	height: 30px;
+	background: var(--color-white);
+	border-radius: 30px 30px 0 0;
+	position: absolute;
+	top: -15px;
+	left: 15px;
+	transform: rotate(-25deg);
+}
+
+.logo-semi-circle:after {
+	content: " ";
+	width: 5px;
+	height: 30px;
+	background: var(--color-white);
+	border-radius: 30px 30px 0 0;
+	position: absolute;
+	top: -15px;
+	right: 15px;
+	transform: rotate(25deg);
+}
+
+.logo-wrapper {
+	content: " ";
+	width: 100px;
+	height: 40px;
+	background: var(--color-green);
+	border-radius: 0 0 5px 5px;
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+}
+
+.eye-left {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background: var(--color-green);
+	position: relative;
+	top: -15px;
+	left: 20px;
+}
+
+.eye-right {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background: var(--color-green);
+	position: relative;
+	top: -15px;
+	left: 0px;
+}
+
+.logo-ears {
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background: var(--color-white);
+	position: absolute;
+	top: -20px;
+	left: 0px;
+}
